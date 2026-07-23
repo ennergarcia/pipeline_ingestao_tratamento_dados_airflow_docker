@@ -1,0 +1,28 @@
+[2026-07-23T14:50:35.369+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: video_game_sales_etl.video_game_sales_etl manual__2026-07-23T14:50:34.452751+00:00 [queued]>
+[2026-07-23T14:50:35.373+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: video_game_sales_etl.video_game_sales_etl manual__2026-07-23T14:50:34.452751+00:00 [queued]>
+[2026-07-23T14:50:35.373+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 2
+[2026-07-23T14:50:35.379+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): video_game_sales_etl> on 2026-07-23 14:50:34.452751+00:00
+[2026-07-23T14:50:35.382+0000] {standard_task_runner.py:60} INFO - Started process 69 to run task
+[2026-07-23T14:50:35.383+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'video_game_sales_etl', 'video_game_sales_etl', 'manual__2026-07-23T14:50:34.452751+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/video_game_sales-etl.py', '--cfg-path', '/tmp/tmprxgdmm41']
+[2026-07-23T14:50:35.384+0000] {standard_task_runner.py:88} INFO - Job 35: Subtask video_game_sales_etl
+[2026-07-23T14:50:35.402+0000] {task_command.py:423} INFO - Running <TaskInstance: video_game_sales_etl.video_game_sales_etl manual__2026-07-23T14:50:34.452751+00:00 [running]> on host ea52b3390a5e
+[2026-07-23T14:50:35.435+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='ennergarcia@gmail.com' AIRFLOW_CTX_DAG_OWNER='Enner Sebastião Garcia' AIRFLOW_CTX_DAG_ID='video_game_sales_etl' AIRFLOW_CTX_TASK_ID='video_game_sales_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-07-23T14:50:34.452751+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-23T14:50:34.452751+00:00'
+[2026-07-23T14:50:35.436+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-23T14:50:35.438+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '#!/bin/bash\n# A linha acima é o shebang, que indica que este script deve ser executado em um shell bash.\n\n# Imprime a string "video_game_sales-etl" no terminal.\necho "video_game_sales-etl"\n\n# Usa o comando cut para extrair as colunas 2,3,4,5,6 e 8 do arquivo video_game_sales-entrada.txt localizado em /opt/***/dags, \n# delimitadas por \'|\', e redireciona a saída para video_game_sales-saida.txt no mesmo diretório.\ncut -f2,3,4,5,6,8 -d"|" /opt/***/dags/vgchartz-2024.txt > /opt/***/dags/video_game_sales-saida.txt\n\n# Empacota e comprime o arquivo video_game_sales-saida-capitalized.txt em um arquivo tar.gz chamado video_game-log.tar.gz,\n# armazenando no diretório /opt/***/dags.\ntar -czvf /opt/***/dags/video_game_sales-log.tar.gz /opt/***/dags/video_game_sales-saida.txt']
+[2026-07-23T14:50:35.443+0000] {subprocess.py:86} INFO - Output:
+[2026-07-23T14:50:35.444+0000] {subprocess.py:93} INFO - video_game_sales-etl
+[2026-07-23T14:50:35.536+0000] {subprocess.py:93} INFO - tar: Removing leading `/' from member names
+[2026-07-23T14:50:35.537+0000] {subprocess.py:93} INFO - /opt/***/dags/video_game_sales-saida.txt
+[2026-07-23T14:50:35.618+0000] {subprocess.py:93} INFO - tar: /opt/***/dags/video_game_sales-saida.txt: file changed as we read it
+[2026-07-23T14:50:35.621+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-07-23T14:50:35.628+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-07-23T14:50:35.631+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=video_game_sales_etl, task_id=video_game_sales_etl, execution_date=20260723T145034, start_date=20260723T145035, end_date=20260723T145035
+[2026-07-23T14:50:35.639+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 35 for task video_game_sales_etl (Bash command failed. The command returned a non-zero exit code 1.; 69)
+[2026-07-23T14:50:35.648+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-07-23T14:50:35.658+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,117 @@
+[2026-07-23T14:49:56.068+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2026-07-23T14:49:56.070+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2026-07-23T14:49:56.070+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-07-23T14:49:56.071+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2026-07-23T14:49:56.088+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2026-07-23T14:49:58.846+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2026-07-23T14:50:23.973+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2026-07-23T14:50:23.973+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2026-07-23T14:50:23.974+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-07-23T14:50:23.974+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2026-07-23T14:50:23.981+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2026-07-23T14:50:24.055+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/video_game_sales-etl.py     40  0.03s             0           0
+================================================================================
+[2026-07-23T14:50:54.304+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     47  0.01s             1           0  0.18s           2026-07-23T14:50:24
+================================================================================
+[2026-07-23T14:51:24.523+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     54  0.01s             1           0  0.07s           2026-07-23T14:50:54
+================================================================================
+[2026-07-23T14:51:54.796+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     61  0.01s             1           0  0.09s           2026-07-23T14:51:24
+================================================================================
+[2026-07-23T14:52:25.052+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     68  0.01s             1           0  0.10s           2026-07-23T14:51:54
+================================================================================
+[2026-07-23T14:52:55.282+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     75  0.01s             1           0  0.08s           2026-07-23T14:52:25
+================================================================================
+[2026-07-23T14:53:25.490+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     82  0.01s             1           0  0.07s           2026-07-23T14:52:55
+================================================================================
+[2026-07-23T14:53:55.696+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     89  0.01s             1           0  0.07s           2026-07-23T14:53:25
+================================================================================
+[2026-07-23T14:54:25.907+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py     96  0.01s             1           0  0.09s           2026-07-23T14:53:55
+================================================================================
+[2026-07-23T14:54:56.126+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py    103  0.01s             1           0  0.09s           2026-07-23T14:54:25
+================================================================================
+[2026-07-23T14:55:24.339+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2026-07-23T14:55:24.347+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2026-07-23T14:55:26.382+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py    110  0.01s             1           0  0.08s           2026-07-23T14:54:56
+================================================================================
+[2026-07-23T14:55:56.602+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py    117  0.00s             1           0  0.10s           2026-07-23T14:55:26
+================================================================================
+[2026-07-23T14:56:26.834+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/video_game_sales-etl.py    124  0.00s             1           0  0.07s           2026-07-23T14:55:56
+================================================================================

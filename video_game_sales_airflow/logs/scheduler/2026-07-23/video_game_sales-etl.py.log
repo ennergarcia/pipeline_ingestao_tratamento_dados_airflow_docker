@@ -1,0 +1,98 @@
+[2026-07-23T14:49:56.126+0000] {processor.py:161} INFO - Started process (PID=38) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:49:56.126+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:49:56.129+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:49:56.129+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:49:56.153+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:49:56.236+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:49:56.236+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:49:56.255+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:49:56.255+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:49:56.275+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.151 seconds
+[2026-07-23T14:50:24.032+0000] {processor.py:161} INFO - Started process (PID=40) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:50:24.035+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:50:24.041+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:50:24.041+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:50:24.072+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:50:24.164+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:50:24.164+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:50:24.175+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:50:24.175+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:50:24.194+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.163 seconds
+[2026-07-23T14:50:54.309+0000] {processor.py:161} INFO - Started process (PID=47) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:50:54.309+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:50:54.312+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:50:54.312+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:50:54.327+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:50:54.342+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:50:54.342+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:50:54.353+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:50:54.353+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:50:54.360+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.055 seconds
+[2026-07-23T14:51:24.531+0000] {processor.py:161} INFO - Started process (PID=54) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:51:24.532+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:51:24.534+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:51:24.534+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:51:24.561+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:51:24.584+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:51:24.584+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:51:24.596+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:51:24.596+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:51:24.604+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.075 seconds
+[2026-07-23T14:51:54.813+0000] {processor.py:161} INFO - Started process (PID=61) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:51:54.814+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:51:54.817+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:51:54.816+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:51:54.840+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:51:54.861+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:51:54.861+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:51:54.875+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:51:54.875+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:51:54.883+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.081 seconds
+[2026-07-23T14:52:25.061+0000] {processor.py:161} INFO - Started process (PID=68) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:52:25.062+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:52:25.064+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:52:25.064+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:52:25.081+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:52:25.100+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:52:25.100+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:52:25.114+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:52:25.114+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:52:25.124+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.065 seconds
+[2026-07-23T14:52:55.287+0000] {processor.py:161} INFO - Started process (PID=75) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:52:55.287+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:52:55.290+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:52:55.290+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:52:55.303+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:52:55.318+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:52:55.318+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:52:55.329+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:52:55.329+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:52:55.337+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.053 seconds
+[2026-07-23T14:53:25.494+0000] {processor.py:161} INFO - Started process (PID=82) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:53:25.494+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:53:25.497+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:53:25.497+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:53:25.515+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:53:25.530+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:53:25.530+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:53:25.543+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:53:25.543+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:53:25.550+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.059 seconds
+[2026-07-23T14:53:55.702+0000] {processor.py:161} INFO - Started process (PID=89) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:53:55.703+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:53:55.706+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:53:55.705+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:53:55.726+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:53:55.752+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:53:55.752+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:53:55.768+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:53:55.768+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:53:55.778+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.079 seconds
+[2026-07-23T14:54:25.914+0000] {processor.py:161} INFO - Started process (PID=96) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:54:25.915+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:54:25.920+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:54:25.920+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:54:25.943+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:54:25.960+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:54:25.960+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:54:25.977+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:54:25.977+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:54:25.989+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.079 seconds
+[2026-07-23T14:54:56.133+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:54:56.135+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:54:56.138+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:54:56.137+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:54:56.155+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:54:56.173+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:54:56.173+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:54:56.186+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:54:56.186+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:54:56.193+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.064 seconds
+[2026-07-23T14:55:26.393+0000] {processor.py:161} INFO - Started process (PID=110) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:55:26.394+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:55:26.399+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:55:26.399+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:55:26.424+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:55:26.444+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:55:26.444+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:55:26.457+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:55:26.457+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:55:26.467+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.080 seconds
+[2026-07-23T14:55:56.607+0000] {processor.py:161} INFO - Started process (PID=117) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:55:56.608+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:55:56.610+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:55:56.610+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:55:56.630+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:55:56.647+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:55:56.647+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:55:56.660+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:55:56.660+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:55:56.668+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.064 seconds
+[2026-07-23T14:56:26.839+0000] {processor.py:161} INFO - Started process (PID=124) to work on /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:56:26.840+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/video_game_sales-etl.py for tasks to queue
+[2026-07-23T14:56:26.844+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:56:26.843+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:56:26.861+0000] {processor.py:840} INFO - DAG(s) 'video_game_sales_etl' retrieved from /opt/airflow/dags/video_game_sales-etl.py
+[2026-07-23T14:56:26.877+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:56:26.877+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-07-23T14:56:26.891+0000] {logging_mixin.py:188} INFO - [2026-07-23T14:56:26.891+0000] {dag.py:3820} INFO - Setting next_dagrun for video_game_sales_etl to 2026-07-23T22:15:00+00:00, run_after=2026-07-24T22:15:00+00:00
+[2026-07-23T14:56:26.903+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/video_game_sales-etl.py took 0.067 seconds

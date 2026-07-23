@@ -1,0 +1,19 @@
+[2026-07-23T14:51:36.822+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: video_game_sales_etl.video_game_sales_etl manual__2026-07-23T14:50:34.452751+00:00 [queued]>
+[2026-07-23T14:51:36.826+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: video_game_sales_etl.video_game_sales_etl manual__2026-07-23T14:50:34.452751+00:00 [queued]>
+[2026-07-23T14:51:36.826+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 2
+[2026-07-23T14:51:36.832+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): video_game_sales_etl> on 2026-07-23 14:50:34.452751+00:00
+[2026-07-23T14:51:36.835+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2026-07-23T14:51:36.838+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'video_game_sales_etl', 'video_game_sales_etl', 'manual__2026-07-23T14:50:34.452751+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/video_game_sales-etl.py', '--cfg-path', '/tmp/tmp4vyl0llh']
+[2026-07-23T14:51:36.838+0000] {standard_task_runner.py:88} INFO - Job 36: Subtask video_game_sales_etl
+[2026-07-23T14:51:36.857+0000] {task_command.py:423} INFO - Running <TaskInstance: video_game_sales_etl.video_game_sales_etl manual__2026-07-23T14:50:34.452751+00:00 [running]> on host ea52b3390a5e
+[2026-07-23T14:51:36.886+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='ennergarcia@gmail.com' AIRFLOW_CTX_DAG_OWNER='Enner Sebastião Garcia' AIRFLOW_CTX_DAG_ID='video_game_sales_etl' AIRFLOW_CTX_TASK_ID='video_game_sales_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-07-23T14:50:34.452751+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-23T14:50:34.452751+00:00'
+[2026-07-23T14:51:36.886+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-23T14:51:36.887+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '#!/bin/bash\n# A linha acima é o shebang, que indica que este script deve ser executado em um shell bash.\n\n# Imprime a string "video_game_sales-etl" no terminal.\necho "video_game_sales-etl"\n\n# Usa o comando cut para extrair as colunas 2,3,4,5,6 e 8 do arquivo video_game_sales-entrada.txt localizado em /opt/***/dags, \n# delimitadas por \'|\', e redireciona a saída para video_game_sales-saida.txt no mesmo diretório.\ncut -f2,3,4,5,6,8 -d"|" /opt/***/dags/vgchartz-2024.txt > /opt/***/dags/video_game_sales-saida.txt\n\n# Empacota e comprime o arquivo video_game_sales-saida-capitalized.txt em um arquivo tar.gz chamado video_game-log.tar.gz,\n# armazenando no diretório /opt/***/dags.\ntar -czvf /opt/***/dags/video_game_sales-log.tar.gz /opt/***/dags/video_game_sales-saida.txt']
+[2026-07-23T14:51:36.891+0000] {subprocess.py:86} INFO - Output:
+[2026-07-23T14:51:36.892+0000] {subprocess.py:93} INFO - video_game_sales-etl
+[2026-07-23T14:51:36.964+0000] {subprocess.py:93} INFO - tar: Removing leading `/' from member names
+[2026-07-23T14:51:36.964+0000] {subprocess.py:93} INFO - /opt/***/dags/video_game_sales-saida.txt
+[2026-07-23T14:51:37.048+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-23T14:51:37.063+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=video_game_sales_etl, task_id=video_game_sales_etl, execution_date=20260723T145034, start_date=20260723T145136, end_date=20260723T145137
+[2026-07-23T14:51:37.101+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-07-23T14:51:37.111+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check
