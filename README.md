@@ -2,8 +2,6 @@
 
 Pipeline de dados orquestrada pelo **Apache Airflow**, executada em **container Docker**, responsável por coletar arquivos `.txt`, aplicar tratamento e persistir os dados tratados em um banco **SQLite** para consumo analítico.
 
-![Arquitetura da Pipeline](./pipeline-arquitetura.svg)
-
 ## 📌 Visão geral
 
 Este projeto automatiza um fluxo recorrente de ingestão de dados:
@@ -17,12 +15,12 @@ Todo o processo roda dentro de um **container Docker**, orquestrado por uma **DA
 ## 🏗️ Arquitetura
 
 ```
-Airflow (DAG agendada)
-        │
-        ▼
 Container Docker
         │
-        ├── 1. Coleta (Python + Bash)      → leitura do arquivo .txt
+        ▼
+Airflow (DAG - Python)
+        │
+        ├── 1. Coleta (Bash)               → leitura do arquivo .txt
         ├── 2. Tratamento (Python)         → limpeza e transformação
         └── 3. Persistência (SQLite)       → gravação no banco .db
         │
@@ -34,8 +32,8 @@ Dados prontos para consumo (SQL / BI / Relatórios)
 
 - **Apache Airflow** — orquestração e agendamento da pipeline
 - **Docker** — empacotamento e isolamento do ambiente de execução
-- **Python** — tratamento e transformação dos dados
-- **Bash** — automação de tarefas de coleta/movimentação de arquivos
+- **Python** — Construção da DAG
+- **Bash** — automação de tarefas de coleta/tratamento/movimentação de arquivos
 - **SQLite** — armazenamento final para consumo analítico
 
 ## 📁 Estrutura do projeto
@@ -43,13 +41,13 @@ Dados prontos para consumo (SQL / BI / Relatórios)
 ```
 .
 ├── dags/
-│   └── pipeline_dag.py        # DAG do Airflow que orquestra a execução
+│   └── video_game_sales-etl.py        # DAG do Airflow que orquestra a execução
 ├── docker/
 │   ├── Dockerfile             # Imagem do container de execução
 │   └── docker-compose.yml     # Orquestração dos serviços (Airflow + pipeline)
 ├── scripts/
-│   ├── coleta.sh              # Script Bash de coleta do arquivo .txt
-│   └── tratamento.py          # Script Python de limpeza/transformação
+│   ├── video_game_sales-etl.sh              # Script Bash de coleta e tratamento do arquivo .txt
+│   └── video_game_sales-insert-sqlite.py          # Script carga de dados .db
 ├── data/
 │   ├── raw/                   # Arquivos .txt de entrada
 │   └── output/                # Banco SQLite (.db) gerado
@@ -61,70 +59,73 @@ Dados prontos para consumo (SQL / BI / Relatórios)
 
 ### Pré-requisitos
 - Docker e Docker Compose instalados
-- Airflow configurado (local ou via `docker-compose`)
+- Airflow configurado (via `docker-compose`)
 
 ### Passos
 
 ```bash
-# 1. Clonar o repositório
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+# 1. Subir o ambiente
+docker compose up airflow-init
 
-# 2. Subir o ambiente
-docker-compose up -d
+# 2. Inicializar o Airflow
+docker compose up
 
 # 3. Acessar a interface do Airflow
 # http://localhost:8080
-
-# 4. Ativar e disparar a DAG "pipeline_dados"
 ```
 
-## 🔁 Exemplo da DAG (Airflow)
+## 🔁 DAG (Airflow)
 
 ```python
 from airflow import DAG
-from airflow.operators.bash import BashOperator
-from airflow.operators.python import PythonOperator
-from datetime import datetime
+from airflow.operators.bash_operator import BashOperator
+from airflow.utils.dates import days_ago
+from datetime import timedelta
 
-with DAG(
-    dag_id="pipeline_dados",
-    schedule_interval="@daily",
-    start_date=datetime(2026, 1, 1),
-    catchup=False,
-) as dag:
+# Definindo os argumentos padrões que serão aplicados à DAG
+default_args = {
+    'owner': 'Enner Sebastião Garcia',              # Proprietário da DAG
+    'start_date': days_ago(0),                      # Data de início da DAG (data atual)
+    'email': ['ennergarcia@gmail.com'],             # Lista de emails para notificações
+    'email_on_failure': False,                      # Desativa notificações por email em caso de falha
+    'email_on_retry': False,                        # Desativa notificações por email em caso de nova tentativa
+    'retries': 1,                                   # Número de tentativas em caso de falha
+    'retry_delay': timedelta(minutes=1),            # Intervalo de tempo entre tentativas
+}
 
-    coleta = BashOperator(
-        task_id="coleta_arquivo",
-        bash_command="bash scripts/coleta.sh",
-    )
+# Criando uma instância de DAG com as configurações especificadas
+dsa_dag = DAG(
+    'video_game_sales_etl',                        # Nome identificador da DAG
+    default_args=default_args,                     # Aplicando os argumentos padrões
+    description='Projeto 1',                       # Descrição da DAG
+    schedule_interval='15 22 * * *',               # Agendamento: Executar diariamente às 22:15
+    tags=['video_game_sales', 'etl']                            # Tags para categorização e busca da DAG
+)
 
-    tratamento = PythonOperator(
-        task_id="tratamento_dados",
-        python_callable=lambda: __import__("scripts.tratamento").tratamento.run(),
-    )
+# Definindo a primeira tarefa usando BashOperator
+dsa_etl = BashOperator(
+    task_id="video_game_sales_etl",                # Identificador único para a tarefa
+    bash_command="./video_game_sales-etl.sh",      # Comando bash que será executado pela tarefa
+    dag=dsa_dag,                                   # Associando a tarefa à DAG
+)
 
-    coleta >> tratamento
+# Definindo a segunda tarefa usando BashOperator
+insert_sqlite = BashOperator(
+    task_id="insert_sqlite",                                    # Identificador único para a tarefa
+    bash_command="./video_game_sales-insert-sqlite.sh",         # Comando bash que será executado pela tarefa
+    dag=dsa_dag,                                                # Associando a tarefa à DAG
+)
+
+# Definindo a ordem de execução das tarefas: dsa_etl seguido por insert_sqlite
+dsa_etl >> insert_sqlite
 ```
 
 ## 📊 Consumo dos dados
 
-Após a execução, o banco `data/output/dados.db` pode ser consultado diretamente via SQLite:
+Após a execução, o banco `data/output/video_game_sales_p1.db` pode ser consultado diretamente via SQLite:
 
 ```bash
-sqlite3 data/output/dados.db "SELECT * FROM dados_tratados LIMIT 10;"
+sqlite3 data/output/video_game_sales_p1.db "SELECT * FROM dados_tratados LIMIT 10;"
 ```
-
-## 📈 Próximos passos
-
-- [ ] Adicionar testes automatizados para as etapas de tratamento
-- [ ] Implementar alertas de falha via Airflow (e-mail/Slack)
-- [ ] Adicionar camada de validação de qualidade de dados
-
-## 👤 Autor
-
-Projeto desenvolvido por **Enner** como parte do portfólio de projetos em análise e engenharia de dados.
-
-## 📄 Licença
 
 Este projeto está sob a licença MIT.
