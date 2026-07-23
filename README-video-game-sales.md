@@ -113,5 +113,15 @@ video_game_etl >> insert_sqlite
 sqlite3 video_game_sales_p1.db "SELECT TITLE, CONSOLE, GENRE, TOTAL_SALES FROM video_game_sales_dados LIMIT 10;"
 ```
 
+---
+
+### 📝 Licença
+
+O projeto está licenciado sob a: [Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+---
+
+### 👨‍💻 Autoria e Notas Finais
+
 Colunas disponíveis na tabela `video_game_sales_dados`: `TITLE`, `CONSOLE`, `GENRE`, `PUBLISHER`, `DEVELOPER`, `TOTAL_SALES`.
 
