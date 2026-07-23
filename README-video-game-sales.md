@@ -2,8 +2,6 @@
 
 Pipeline de dados orquestrada pelo **Apache Airflow**, executada em ambiente **Docker**, que realiza a extração, transformação e carga (ETL) de um dataset de vendas de video games, persistindo o resultado em um banco **SQLite**.
 
-![Arquitetura da Pipeline](./video-game-sales-arquitetura.svg)
-
 ## 📌 Visão geral
 
 A DAG `video_game_sales_etl` roda diariamente às 22:15 e executa duas tasks em sequência:
@@ -68,9 +66,7 @@ video_game_sales_airflow/
 Pré-requisito: Docker instalado. Se houver um PostgreSQL local rodando na porta 5432, desligue-o antes de subir o Airflow (evita conflito de porta).
 
 ```bash
-# 1. Clonar o repositório
-git clone https://github.com/seu-usuario/seu-repo.git
-cd video_game_sales_airflow
+# 1. Observe as instruções no arquivo LEIAME.txt
 
 # 2. Inicializar o banco de metadados do Airflow
 docker compose up airflow-init
@@ -88,7 +84,7 @@ docker compose up
 ## 🔁 DAG (Airflow)
 
 ```python
-dsa_dag = DAG(
+video_game_dag = DAG(
     'video_game_sales_etl',
     default_args=default_args,
     description='Projeto 1',
@@ -96,19 +92,19 @@ dsa_dag = DAG(
     tags=['video_game_sales', 'etl']
 )
 
-dsa_etl = BashOperator(
+video_game_etl = BashOperator(
     task_id="video_game_sales_etl",
     bash_command="./video_game_sales-etl.sh",
-    dag=dsa_dag,
+    dag=video_game_dag,
 )
 
 insert_sqlite = BashOperator(
     task_id="insert_sqlite",
     bash_command="./video_game_sales-insert-sqlite.sh",
-    dag=dsa_dag,
+    dag=video_game_dag,
 )
 
-dsa_etl >> insert_sqlite
+video_game_etl >> insert_sqlite
 ```
 
 ## 📊 Consumo dos dados
@@ -119,16 +115,3 @@ sqlite3 video_game_sales_p1.db "SELECT TITLE, CONSOLE, GENRE, TOTAL_SALES FROM v
 
 Colunas disponíveis na tabela `video_game_sales_dados`: `TITLE`, `CONSOLE`, `GENRE`, `PUBLISHER`, `DEVELOPER`, `TOTAL_SALES`.
 
-## 📈 Próximos passos
-
-- [ ] Adicionar validação de qualidade dos dados antes da carga
-- [ ] Parametrizar caminhos de arquivos via variáveis de ambiente
-- [ ] Adicionar testes automatizados para os scripts de transformação
-
-## 👤 Autor
-
-Projeto desenvolvido por **Enner Sebastião Garcia** como parte do portfólio de projetos em análise e engenharia de dados.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
