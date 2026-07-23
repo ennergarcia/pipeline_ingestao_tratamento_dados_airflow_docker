@@ -128,4 +128,15 @@ Após a execução, o banco `data/output/video_game_sales_p1.db` pode ser consul
 sqlite3 data/output/video_game_sales_p1.db "SELECT * FROM dados_tratados LIMIT 10;"
 ```
 
-Este projeto está sob a licença MIT.
+---
+
+### 📝 Licença
+
+O projeto está licenciado sob a: [Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+---
+
+### 👨‍💻 Autoria e Notas Finais
+
+* **Por:** Enner Sebastião Garcia
+* **Nota:** Todas as imagens foram produzidas por IA.
