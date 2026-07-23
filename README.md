@@ -115,3 +115,15 @@ sqlite3 video_game_sales_p1.db "SELECT TITLE, CONSOLE, GENRE, TOTAL_SALES FROM v
 
 Colunas disponíveis na tabela `video_game_sales_dados`: `TITLE`, `CONSOLE`, `GENRE`, `PUBLISHER`, `DEVELOPER`, `TOTAL_SALES`.
 
+---
+
+### 📝 Licença
+
+O projeto está licenciado sob a: [Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+---
+
+### 👨‍💻 Autoria e Notas Finais
+
+* **Por:** Enner Sebastião Garcia
+* **Nota:** Todas as imagens foram produzidas por IA.
